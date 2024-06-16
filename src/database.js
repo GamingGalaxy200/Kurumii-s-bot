@@ -12,13 +12,24 @@ const rolesDB = new sqlite3.Database('./src/databases/roles.db', (err) => {
 rolesDB.serialize(() => {
     rolesDB.run(`
         CREATE TABLE IF NOT EXISTS roles (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             server_id TEXT,
             role_one_id TEXT,
             role_two_id TEXT,
-            role_three_id TEXT,
-            PRIMARY KEY (server_id)
+            role_three_id TEXT
         )
     `);
 });
 
-module.exports = { rolesDB };
+function getRoleEntriesByServerId(serverId) {
+    return new Promise((resolve, reject) => {
+        rolesDB.all(`SELECT role_one_id AS role1Id, role_two_id AS role2Id, role_three_id AS role3Id FROM roles WHERE server_id = ?`, [serverId], (err, rows) => {
+            if (err) {
+                return reject(err);
+            }
+            resolve(rows);
+        });
+    });
+}
+
+module.exports = { rolesDB, getRoleEntriesByServerId };
