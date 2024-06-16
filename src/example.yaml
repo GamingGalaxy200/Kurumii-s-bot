@@ -1,0 +1,11 @@
+token: "TOKEN" # Insert your bot token here.
+BotApplicationID: "000000000000000" # The Application ID of your bot.
+
+NotifyGuild: "000000000000000" # The id of the server on which you want to be notified at startup.
+NotifyChannel: "000000000000000" # The id of the channel in which you want to be notified at startup.
+NotifyMessage: "Bot is online!" # The message with which you want to be notified.
+
+Invalid: "Not a valid slash command" # The message that will be sent if a slash command isnt used correctly.
+nopermission: "Sorry, you cant do that." # If a user hasnt the permission to do something.
+
+botownerId: "000000000000000" # The ID of the bot owner

@@ -1,0 +1,27 @@
+{
+  "name": "kurumii-s-bot",
+  "version": "1.0.0",
+  "description": "A Discord Bot that manages roles for Kurumii",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "deploycommands": "node ./src/deploy-commands.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GamingGalaxy200/Kurumii-s-bot.git"
+  },
+  "author": "https://github.com/GamingGalaxy200",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord.js": "^14.11.0",
+    "js-yaml": "^4.1.0",
+    "ffmpeg-static": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "bugs": {
+    "url": "https://github.com/GamingGalaxy200/Kurumii-s-bot/issues"
+  },
+  "homepage": "https://github.com/GamingGalaxy200/Kurumii-s-bot#readme"
+}
