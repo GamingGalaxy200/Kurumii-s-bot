@@ -1,6 +1,4 @@
 # Kurumii`s bot
-The current progress is the foundation of the bot. Currently it is not functional to manage roles.  
-guildMemberUpdate.js does not do anything so far.. Later this will be the file managing the roles.
 ## Overview:
 
 - [Overview:](#overview)
